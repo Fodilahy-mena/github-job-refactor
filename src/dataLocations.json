@@ -1,0 +1,40 @@
+[{
+    "name": "Remote",
+    "id": "1"
+},{
+    "name":"Berlin",
+    "id": "2"},
+{
+    "name":"Alsdorf",
+    "id": "3"
+}, {
+    "name":"Stony",
+    "id": "4"
+},
+{
+    "name":"United States",
+    "id": "5"
+},
+{
+    "name":"Utrecht",
+    "id": "6"
+},
+{
+    "name":"Vilnius",
+    "id": "7"
+},
+{
+    "name":"Sweden",
+    "id": "8"
+}
+,
+{
+    "name":"London",
+    "id": "9"
+}
+,
+{
+    "name":"New York",
+    "id": "10"
+}
+]

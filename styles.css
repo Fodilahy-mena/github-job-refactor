@@ -1,0 +1,66 @@
+
+
+.job_type {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+    color: #334680;
+
+    border: 1px solid #334680;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    padding: 6px 8px;
+}
+
+/* Job details */
+.bacl--to-main {
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #1E86FF;
+}
+.job_apply {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #B9BDCF;
+
+}
+.apply_on {
+    word-break: break-all;
+    color: #334680;
+}
+.job_url {
+    color: #1E86FF;
+}
+.job_url i {
+    color: #334680;
+}
+.job_descriptions {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    color: #334680;
+
+}
+.job_comapny {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.job_created {
+    display: flex;
+    flex-direction: column;
+}
