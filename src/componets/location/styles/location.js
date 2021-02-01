@@ -18,7 +18,9 @@ export const JobType = styled.div`
 
 
 export const JobTypeInput = styled.input`
-
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
 `;
 
 export const JobTypeLabel = styled.label`
@@ -92,6 +94,10 @@ export const List = styled.ul`
 
 export const Link = styled(ReachRouterLink)`
     text-decoration: none;
+    font-weight: 500;
+    line-height: 14px;
+    /* identical to box height */
+    color: #B9BDCF;
 `;
 
 export const Item = styled.li`
@@ -112,7 +118,11 @@ export const Image = styled.img`
 `;
 
 export const Wrapper = styled.div`
-
+    &:nth-of-type(2) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
 `;
 
 export const JobLoc = styled.h3`
@@ -148,7 +158,10 @@ export const JobTypeName = styled.button`
 `;
 
 export const JobLocName = styled.span`
-
+    white-space: nowrap; 
+    width: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 `;
 
 export const JobCreatedOn = styled.span`
@@ -181,6 +194,7 @@ export const Arrow = styled.i`
     border-radius: 4px;
     color: #b9bdcf;
     outline: none;
+    cursor: pointer;
     &:hover {
         border-color: #1e86ff;
     }

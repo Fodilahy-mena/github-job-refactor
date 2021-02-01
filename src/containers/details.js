@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import {useParams} from 'react-router-dom';
 import {Details} from '../componets';
 import {Context} from '../context/useContext';
+import { formatDistance } from 'date-fns';
 
 export default function DetailsContainer({children}) {
     const {state, dispatch} = useContext(Context);
@@ -28,12 +29,12 @@ export default function DetailsContainer({children}) {
                     <Details.JobTitle>{arr.title}</Details.JobTitle>
                     <Details.JobType>{arr.type}</Details.JobType>
                 </Details.Job>
-                <Details.CreatedAt>{new Date(arr.created_at).toDateString()}</Details.CreatedAt>
+                <Details.CreatedAt><i style={{position: 'relative', top:'2px'}} className="ri-time-line"></i> {formatDistance(new Date(arr.created_at), new Date())} ago</Details.CreatedAt>
                 <Details.Company>
                     <Details.Logo src={arr.company_logo}/>
                     <Details.Wrapper>
-                        <Details.Location>{arr.location}</Details.Location>
-                        <Details.JobBirth>{new Date(arr.created_at).toDateString()}</Details.JobBirth>
+                        <Details.CompanyName>{arr.company}</Details.CompanyName>
+                        <Details.Location><i style={{position: 'relative', top:'2px'}} className="ri-earth-line"></i> {arr.location}</Details.Location>
                     </Details.Wrapper>
                 </Details.Company>
                 <Details.Description dangerouslySetInnerHTML={{__html: arr.description}}></Details.Description>

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Fodilahy-mena/github-job-refactor#readme",
   "dependencies": {
+    "date-fns": "^2.16.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",

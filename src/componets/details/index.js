@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header, Container, Link, ApplyTitle, HowToApply, JobUrl, Article, Job, JobTitle, JobType, CreatedAt, Company, Logo, Wrapper, Location, JobBirth, Description } from './styles/details';
+import {Header, Container, Link, ApplyTitle, HowToApply, JobUrl, Article, Job, JobTitle, JobType, CreatedAt, Company, Logo, Wrapper, Location, CompanyName, Description } from './styles/details';
 
 export default function Details({children, ...restProps}) {
     return (<Container {...restProps}>{children}</Container>);
@@ -61,8 +61,8 @@ Details.Location = function DetailsLocation({children, ...restProps}) {
     return (<Location {...restProps}>{children}</Location>)
 }
 
-Details.JobBirth = function DetailsJobBirth({children, ...restProps}) {
-    return (<JobBirth {...restProps}>{children}</JobBirth>)
+Details.CompanyName = function DetailsCompanyName({children, ...restProps}) {
+    return (<CompanyName {...restProps}>{children}</CompanyName>)
 }
 
 Details.Description = function DetailsDescription({children, ...restProps}) {

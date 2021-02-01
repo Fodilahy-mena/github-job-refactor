@@ -18,8 +18,8 @@ export default function HeaderContainer({children}) {
         <Header>
             <Header.Container>
                 <Header.Frame>
-                    <Header.Form onSubmit={(e, id) => handleSearche(e, id)}>
-                        <Header.Input onChange={(e) => setSearch(e.target.value)}/>
+                    <Header.Form onSubmit={(e) => handleSearche(e)}>
+                        <Header.Input onChange={(e) => setSearch(e.target.value)} placeholder="Title, companies, expertise"/>
                         <Header.Button>Search</Header.Button>
                     </Header.Form>
                 </Header.Frame>

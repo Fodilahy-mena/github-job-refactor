@@ -29,10 +29,12 @@ const GlobalStyles = createGlobalStyle`
         /* font-size: 24px; */
     }
 
-    main {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
+    @media (min-width: 1114px) {
+        main {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
     }
 
 `;

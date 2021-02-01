@@ -1,8 +1,9 @@
 import React,{useContext, useEffect, useState} from 'react'
+import { formatDistance } from 'date-fns';
 import {Context} from '../context/useContext';
 import dataLocations from '../dataLocations.json';
-
 import { Location } from '../componets';
+
 
 export default function LocationContainer({children}) {
     const {state, dispatch} = useContext(Context);
@@ -101,8 +102,8 @@ export default function LocationContainer({children}) {
                             <Location.JobTypeName>{job.type}</Location.JobTypeName>
                         </Location.Wrapper>
                         <Location.Wrapper>
-                            <Location.JobLocName>{job.location}</Location.JobLocName>
-                            <Location.JobCreatedOn>{new Date(job.created_at).toDateString()}</Location.JobCreatedOn>
+                            <Location.JobLocName><i style={{position: 'relative', top:'2px'}} className="ri-earth-line"></i> {job.location}</Location.JobLocName>
+                            <Location.JobCreatedOn><i style={{position: 'relative', top:'2px'}} className="ri-time-line"></i> {formatDistance(new Date(job.created_at), new Date())} ago</Location.JobCreatedOn>
                         </Location.Wrapper>
                     </Location.Item>
                 </Location.Link>
