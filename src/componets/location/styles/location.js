@@ -154,3 +154,34 @@ export const JobLocName = styled.span`
 export const JobCreatedOn = styled.span`
 
 `;
+
+export const Pagination = styled.div`
+
+`;
+export const PageButton = styled.button`
+    padding: 11px 15px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #b9bdcf;
+    border: 1px solid #b9bdcf;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #1e86ff;
+    }
+`;
+
+export const Arrow = styled.i`
+    padding: 14px 15px;
+    position: relative;
+    top: 2px;
+    border: 1px solid #b9bdcf;
+    border-radius: 4px;
+    color: #b9bdcf;
+    outline: none;
+    &:hover {
+        border-color: #1e86ff;
+    }
+`;

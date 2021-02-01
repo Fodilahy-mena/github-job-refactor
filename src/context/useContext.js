@@ -43,7 +43,7 @@ function ContextProvider(props) {
         error: null,
         currentFilter: '',
         // a default job loction, will be updated
-        currentLocation: 'Berlin',
+        currentLocation: '',
         
       })
 

@@ -14,15 +14,23 @@ export default function LocationContainer({children}) {
     const [location, setLocation] = useState("")
     const [isJobType, setIsJobType] = useState(false);
     const [jobType, setJobType] = useState('');
+    const [fromPage, setFromPage] = useState(0);
+    const [toPage, setToPage] = useState(5)
     
     useEffect(() => {
         setLocationsData(dataLocations);
     }, []);
-    console.log("cF", currentFilter);
-    console.log("cL", currentLocation);
-{/* <JobList search={search} location={location} zipCode={zipCode} jobType={jobType} jobs={response}/> */}
-
+    
+    const filter = response !== null && 
+            // filter the data by their title, location, company name, and job type
+            response.filter(job =>
+            job.location.toLowerCase().includes(currentLocation.toLowerCase())
+            && job.title.toLowerCase().includes(currentFilter.toLowerCase())
+            && job.company.toLowerCase().includes(currentFilter.toLowerCase())
+            && job.type.toLowerCase().includes(jobType.toLowerCase()))
+    
     console.log(response)
+    console.log(filter)
 
     return (
         <>
@@ -83,7 +91,7 @@ export default function LocationContainer({children}) {
             job.location.toLowerCase().includes(currentLocation.toLowerCase())
             && job.title.toLowerCase().includes(currentFilter.toLowerCase())
             && job.company.toLowerCase().includes(currentFilter.toLowerCase())
-            && job.type.toLowerCase().includes(jobType.toLowerCase())).slice(0, 5).map(job => (
+            && job.type.toLowerCase().includes(jobType.toLowerCase())).slice(fromPage, toPage).map(job => (
                 <Location.Link to={`/${job.id}`} key={job.id}>
                     <Location.Item>
                         <Location.Image src={job.company_logo}/>
@@ -99,6 +107,48 @@ export default function LocationContainer({children}) {
                     </Location.Item>
                 </Location.Link>
                 ))}
+                <Location.Pagination>
+                    {toPage > 5 && <Location.Arrow onClick={() => {
+                    setFromPage(fromPage - 5);
+                    setToPage(toPage - 5)
+                    }} className="ri-arrow-left-s-line"></Location.Arrow>}
+                    <Location.PageButton id={toPage === 5 ? 'active' : ''} onClick={() => {
+                        setFromPage(0);
+                        setToPage(5)
+                    }}>
+                        1
+                    </Location.PageButton>
+                    {filter.length > 5 && <Location.PageButton id={toPage === 10 ? 'active' : ''} onClick={() => {
+                        setFromPage(5);
+                        setToPage(10)
+                    }}>
+                        2
+                    </Location.PageButton>}
+                    {filter.length > 10 && <Location.PageButton id={toPage === 15 ? 'active' : ''} onClick={() => {
+                        setFromPage(10);
+                        setToPage(15)
+                    }}>
+                        3
+                    </Location.PageButton>}
+                    {filter.length > 15 && <Location.PageButton id={toPage === 20 ? 'active' : ''} onClick={() => {
+                        setFromPage(15);
+                        setToPage(20)
+                    }}>
+                        4
+                    </Location.PageButton>}
+
+                    {filter.length > 20 && <Location.PageButton id={toPage === 25 ? 'active' : ''} onClick={() => {
+                        setFromPage(20);
+                        setToPage(25)
+                    }}>
+                        5
+                    </Location.PageButton>}
+                    
+                    {toPage <= filter.length && <Location.Arrow id={toPage > 25 ? 'active' : ''} onClick={() => {
+                        setFromPage(fromPage + 5);
+                        setToPage(toPage + 5)
+                    }} className="ri-arrow-right-s-line"></Location.Arrow>}
+                </Location.Pagination>
             </Location.List>
         </Location.Jobs>
         </>

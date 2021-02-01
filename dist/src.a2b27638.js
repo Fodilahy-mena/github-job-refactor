@@ -36011,13 +36011,43 @@ Header.Button = function HeaderButton(_ref6) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.JobCreatedOn = exports.JobLocName = exports.JobTypeName = exports.JobTitle = exports.JobLoc = exports.Wrapper = exports.Image = exports.Item = exports.Link = exports.List = exports.Jobs = exports.Button = exports.FieldsetLabel = exports.FieldsetInput = exports.Fieldset = exports.FrameLabel = exports.FrameInput = exports.Frame = exports.JobTypeLabel = exports.JobTypeInput = exports.JobType = exports.Form = exports.Container = void 0;
+exports.Arrow = exports.PageButton = exports.Pagination = exports.JobCreatedOn = exports.JobLocName = exports.JobTypeName = exports.JobTitle = exports.JobLoc = exports.Wrapper = exports.Image = exports.Item = exports.Link = exports.List = exports.Jobs = exports.Button = exports.FieldsetLabel = exports.FieldsetInput = exports.Fieldset = exports.FrameLabel = exports.FrameInput = exports.Frame = exports.JobTypeLabel = exports.JobTypeInput = exports.JobType = exports.Form = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject26() {
+  var data = _taggedTemplateLiteral(["\n    padding: 14px 15px;\n    position: relative;\n    top: 2px;\n    border: 1px solid #b9bdcf;\n    border-radius: 4px;\n    color: #b9bdcf;\n    outline: none;\n    &:hover {\n        border-color: #1e86ff;\n    }\n"]);
+
+  _templateObject26 = function _templateObject26() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject25() {
+  var data = _taggedTemplateLiteral(["\n    padding: 11px 15px;\n    font-size: 1.2rem;\n    line-height: 1.4rem;\n    color: #b9bdcf;\n    border: 1px solid #b9bdcf;\n    border-radius: 4px;\n    outline: none;\n    cursor: pointer;\n\n    &:hover {\n        border-color: #1e86ff;\n    }\n"]);
+
+  _templateObject25 = function _templateObject25() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject24() {
+  var data = _taggedTemplateLiteral(["\n\n"]);
+
+  _templateObject24 = function _templateObject24() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject23() {
   var data = _taggedTemplateLiteral(["\n\n"]);
@@ -36341,6 +36371,18 @@ exports.JobLocName = JobLocName;
 var JobCreatedOn = _styledComponents.default.span(_templateObject23());
 
 exports.JobCreatedOn = JobCreatedOn;
+
+var Pagination = _styledComponents.default.div(_templateObject24());
+
+exports.Pagination = Pagination;
+
+var PageButton = _styledComponents.default.button(_templateObject25());
+
+exports.PageButton = PageButton;
+
+var Arrow = _styledComponents.default.i(_templateObject26());
+
+exports.Arrow = Arrow;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/componets/location/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -36516,6 +36558,27 @@ Location.JobCreatedOn = function LocationJobCreatedOn(_ref23) {
       restProps = _objectWithoutProperties(_ref23, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_location.JobCreatedOn, restProps, children);
+};
+
+Location.Pagination = function LocationPagination(_ref24) {
+  var children = _ref24.children,
+      restProps = _objectWithoutProperties(_ref24, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_location.Pagination, restProps, children);
+};
+
+Location.PageButton = function LocationPageButton(_ref25) {
+  var children = _ref25.children,
+      restProps = _objectWithoutProperties(_ref25, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_location.PageButton, restProps, children);
+};
+
+Location.Arrow = function LocationArrow(_ref26) {
+  var children = _ref26.children,
+      restProps = _objectWithoutProperties(_ref26, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_location.Arrow, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/location":"src/componets/location/styles/location.js"}],"src/componets/details/styles/details.js":[function(require,module,exports) {
 "use strict";
@@ -37025,7 +37088,7 @@ function ContextProvider(props) {
     error: null,
     currentFilter: '',
     // a default job loction, will be updated
-    currentLocation: 'Berlin'
+    currentLocation: ''
   }),
       _useReducer2 = _slicedToArray(_useReducer, 2),
       state = _useReducer2[0],
@@ -37232,15 +37295,25 @@ function LocationContainer(_ref) {
       jobType = _useState10[0],
       setJobType = _useState10[1];
 
+  var _useState11 = (0, _react.useState)(0),
+      _useState12 = _slicedToArray(_useState11, 2),
+      fromPage = _useState12[0],
+      setFromPage = _useState12[1];
+
+  var _useState13 = (0, _react.useState)(5),
+      _useState14 = _slicedToArray(_useState13, 2),
+      toPage = _useState14[0],
+      setToPage = _useState14[1];
+
   (0, _react.useEffect)(function () {
     setLocationsData(_dataLocations.default);
   }, []);
-  console.log("cF", currentFilter);
-  console.log("cL", currentLocation);
-  {
-    /* <JobList search={search} location={location} zipCode={zipCode} jobType={jobType} jobs={response}/> */
-  }
+  var filter = response !== null && // filter the data by their title, location, company name, and job type
+  response.filter(function (job) {
+    return job.location.toLowerCase().includes(currentLocation.toLowerCase()) && job.title.toLowerCase().includes(currentFilter.toLowerCase()) && job.company.toLowerCase().includes(currentFilter.toLowerCase()) && job.type.toLowerCase().includes(jobType.toLowerCase());
+  });
   console.log(response);
+  console.log(filter);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading && /*#__PURE__*/_react.default.createElement("div", null, "Loading..."), !loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_componets.Location, null, /*#__PURE__*/_react.default.createElement(_componets.Location.Form, null, /*#__PURE__*/_react.default.createElement(_componets.Location.JobType, null, /*#__PURE__*/_react.default.createElement(_componets.Location.JobTypeInput, {
     type: "checkbox",
     name: "jobType",
@@ -37279,14 +37352,57 @@ function LocationContainer(_ref) {
   })))), /*#__PURE__*/_react.default.createElement(_componets.Location.Jobs, null, /*#__PURE__*/_react.default.createElement(_componets.Location.List, null, response !== null && // filter the data by their title, location, company name, and job type
   response.filter(function (job) {
     return job.location.toLowerCase().includes(currentLocation.toLowerCase()) && job.title.toLowerCase().includes(currentFilter.toLowerCase()) && job.company.toLowerCase().includes(currentFilter.toLowerCase()) && job.type.toLowerCase().includes(jobType.toLowerCase());
-  }).slice(0, 5).map(function (job) {
+  }).slice(fromPage, toPage).map(function (job) {
     return /*#__PURE__*/_react.default.createElement(_componets.Location.Link, {
       to: "/".concat(job.id),
       key: job.id
     }, /*#__PURE__*/_react.default.createElement(_componets.Location.Item, null, /*#__PURE__*/_react.default.createElement(_componets.Location.Image, {
       src: job.company_logo
     }), /*#__PURE__*/_react.default.createElement(_componets.Location.Wrapper, null, /*#__PURE__*/_react.default.createElement(_componets.Location.JobLoc, null, job.location), /*#__PURE__*/_react.default.createElement(_componets.Location.JobTitle, null, job.title), /*#__PURE__*/_react.default.createElement(_componets.Location.JobTypeName, null, job.type)), /*#__PURE__*/_react.default.createElement(_componets.Location.Wrapper, null, /*#__PURE__*/_react.default.createElement(_componets.Location.JobLocName, null, job.location), /*#__PURE__*/_react.default.createElement(_componets.Location.JobCreatedOn, null, new Date(job.created_at).toDateString()))));
-  })))));
+  }), /*#__PURE__*/_react.default.createElement(_componets.Location.Pagination, null, toPage > 5 && /*#__PURE__*/_react.default.createElement(_componets.Location.Arrow, {
+    onClick: function onClick() {
+      setFromPage(fromPage - 5);
+      setToPage(toPage - 5);
+    },
+    className: "ri-arrow-left-s-line"
+  }), /*#__PURE__*/_react.default.createElement(_componets.Location.PageButton, {
+    id: toPage === 5 ? 'active' : '',
+    onClick: function onClick() {
+      setFromPage(0);
+      setToPage(5);
+    }
+  }, "1"), filter.length > 5 && /*#__PURE__*/_react.default.createElement(_componets.Location.PageButton, {
+    id: toPage === 10 ? 'active' : '',
+    onClick: function onClick() {
+      setFromPage(5);
+      setToPage(10);
+    }
+  }, "2"), filter.length > 10 && /*#__PURE__*/_react.default.createElement(_componets.Location.PageButton, {
+    id: toPage === 15 ? 'active' : '',
+    onClick: function onClick() {
+      setFromPage(10);
+      setToPage(15);
+    }
+  }, "3"), filter.length > 15 && /*#__PURE__*/_react.default.createElement(_componets.Location.PageButton, {
+    id: toPage === 20 ? 'active' : '',
+    onClick: function onClick() {
+      setFromPage(15);
+      setToPage(20);
+    }
+  }, "4"), filter.length > 20 && /*#__PURE__*/_react.default.createElement(_componets.Location.PageButton, {
+    id: toPage === 25 ? 'active' : '',
+    onClick: function onClick() {
+      setFromPage(20);
+      setToPage(25);
+    }
+  }, "5"), toPage <= filter.length && /*#__PURE__*/_react.default.createElement(_componets.Location.Arrow, {
+    id: toPage > 25 ? 'active' : '',
+    onClick: function onClick() {
+      setFromPage(fromPage + 5);
+      setToPage(toPage + 5);
+    },
+    className: "ri-arrow-right-s-line"
+  }))))));
 }
 },{"react":"node_modules/react/index.js","../context/useContext":"src/context/useContext.js","../dataLocations.json":"src/dataLocations.json","../componets":"src/componets/index.js"}],"src/pages/home.js":[function(require,module,exports) {
 "use strict";
@@ -37495,7 +37611,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50613" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63171" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

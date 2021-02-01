@@ -5,7 +5,8 @@ import {Container, Form,
         Frame, FrameInput, FrameLabel, 
         Fieldset, FieldsetInput, FieldsetLabel, Button,
         Jobs, List, Link, Item, Image, Wrapper, JobLoc, JobTitle,
-        JobTypeName, JobLocName, JobCreatedOn
+        JobTypeName, JobLocName, JobCreatedOn,
+        Pagination, PageButton, Arrow
         } from './styles/location';
 
 export default function Location({children, ...restProps}) {
@@ -100,4 +101,17 @@ Location.JobLocName = function LocationJobLocName({children, ...restProps}) {
 
 Location.JobCreatedOn = function LocationJobCreatedOn({children, ...restProps}) {
     return (<JobCreatedOn {...restProps}>{children}</JobCreatedOn>)
+}
+
+
+Location.Pagination = function LocationPagination({children, ...restProps}) {
+    return (<Pagination {...restProps}>{children}</Pagination>)
+}
+
+Location.PageButton = function LocationPageButton({children, ...restProps}) {
+    return (<PageButton {...restProps}>{children}</PageButton>)
+}
+
+Location.Arrow = function LocationArrow({children, ...restProps}) {
+    return (<Arrow {...restProps}>{children}</Arrow>)
 }
