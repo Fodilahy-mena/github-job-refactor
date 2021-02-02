@@ -2,10 +2,16 @@ import styled from 'styled-components';
 import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
+    
+    color: #334680;
     @media (min-width: 1114px) {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 25% 1fr;
         gap: 32px;
+    }
+    a {
+        text-decoration: none;
+        color: #1E86FF;
     }
 `;
 
@@ -14,14 +20,20 @@ export const Header = styled.header`
 `;
 export const Link = styled(ReachRouterLink)`
     text-decoration: none;
+    color: #1E86FF;
 `;
 
 export const ApplyTitle = styled.h2`
-
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #B9BDCF;
 `;
 
 export const HowToApply = styled.p`
-
+    word-break: break-all;
 `;
 
 export const JobUrl = styled.a`
@@ -38,7 +50,12 @@ export const Job = styled.div`
 `;
 
 export const JobTitle = styled.h2`
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
 
+    color: #334680;
 `;
 
 export const JobType = styled.button`
@@ -61,11 +78,12 @@ export const JobType = styled.button`
     height: fit-content;
 `;
 
-export const CreatedAt = styled.span`
+export const CreatedAt = styled.p`
     font-style: normal;
     font-weight: 500;
     line-height: 14px;
-    /* padding-bottom: 2rem; */
+    margin-top: 0;
+    margin-bottom: 35px;
     /* identical to box height */
     color: #B7BCCE;
 
@@ -106,5 +124,13 @@ export const Location = styled.span`
 
 
 export const Description = styled.div`
+    margin-top: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    color: #334680;
 
 `;

@@ -42,10 +42,11 @@ export const Input = styled.input`
     &::placeholder {
         padding-inline-start: 30px;
     }
-    &:placeholder-shown {
+    &::placeholder {
     background: url('/img/search.svg') no-repeat;
     align-items: center;
-    background-position-y: 2px;
+    background-position-y: 0px;
+    z-index: 111;
     opacity: .6;
     }
 `;

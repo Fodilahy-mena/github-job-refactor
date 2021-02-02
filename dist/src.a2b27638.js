@@ -35872,7 +35872,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    outline: none;\n    margin-left: 10px;\n    margin-right: 24px;\n    padding: 0 4px;\n    width: 100%;\n    height: 32px;\n    border: none;\n    background: transparent;\n    &::placeholder {\n        padding-inline-start: 30px;\n    }\n    &:placeholder-shown {\n    background: url('/img/search.svg') no-repeat;\n    align-items: center;\n    background-position-y: 2px;\n    opacity: .6;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    outline: none;\n    margin-left: 10px;\n    margin-right: 24px;\n    padding: 0 4px;\n    width: 100%;\n    height: 32px;\n    border: none;\n    background: transparent;\n    &::placeholder {\n        padding-inline-start: 30px;\n    }\n    &::placeholder {\n    background: url('/img/search.svg') no-repeat;\n    align-items: center;\n    background-position-y: 0px;\n    z-index: 111;\n    opacity: .6;\n    }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36020,7 +36020,7 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject26() {
-  var data = _taggedTemplateLiteral(["\n    padding: 14px 15px;\n    position: relative;\n    top: 2px;\n    border: 1px solid #b9bdcf;\n    border-radius: 4px;\n    color: #b9bdcf;\n    outline: none;\n    cursor: pointer;\n    &:hover {\n        border-color: #1e86ff;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-right: 16px;\n    padding: 14px 15px;\n    position: relative;\n    top: 2px;\n    border: 1px solid #b9bdcf;\n    border-radius: 4px;\n    color: #b9bdcf;\n    outline: none;\n    cursor: pointer;\n\n    &:last-of-type {\n        margin-right: 0;\n    }\n    &:hover {\n        border-color: #1e86ff;\n    }\n"]);
 
   _templateObject26 = function _templateObject26() {
     return data;
@@ -36030,7 +36030,7 @@ function _templateObject26() {
 }
 
 function _templateObject25() {
-  var data = _taggedTemplateLiteral(["\n    padding: 11px 15px;\n    font-size: 1.2rem;\n    line-height: 1.4rem;\n    color: #b9bdcf;\n    border: 1px solid #b9bdcf;\n    border-radius: 4px;\n    outline: none;\n    cursor: pointer;\n\n    &:hover {\n        border-color: #1e86ff;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-right: 16px;\n    padding: 11px 15px;\n    font-size: 1.2rem;\n    line-height: 1.4rem;\n    color: #b9bdcf;\n    border: 1px solid #b9bdcf;\n    border-radius: 4px;\n    outline: none;\n    cursor: pointer;\n    &:hover {\n        border-color: #1e86ff;\n    }\n"]);
 
   _templateObject25 = function _templateObject25() {
     return data;
@@ -36040,7 +36040,7 @@ function _templateObject25() {
 }
 
 function _templateObject24() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-top: 32px;\n    display: flex;\n    justify-content: flex-end;\n"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -36070,7 +36070,7 @@ function _templateObject22() {
 }
 
 function _templateObject21() {
-  var data = _taggedTemplateLiteral(["\n    font-family: Roboto;\n    font-style: normal;\n    font-weight: bold;\n    font-size: 12px;\n    line-height: 14px;\n    /* identical to box height */\n    color: #334680;\n    border: 1px solid #334680;\n    box-sizing: border-box;\n    border-radius: 4px;\n    cursor: pointer;\n    outline: none;\n    padding: 6px 8px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-family: Roboto;\n    font-style: normal;\n    font-weight: bold;\n    font-size: 12px;\n    line-height: 14px;\n    /* identical to box height */\n    color: #334680;\n\n    max-width: fit-content;\n    border: 1px solid #334680;\n    box-sizing: border-box;\n    border-radius: 4px;\n    cursor: pointer;\n    outline: none;\n    padding: 6px 8px;\n"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -36080,7 +36080,7 @@ function _templateObject21() {
 }
 
 function _templateObject20() {
-  var data = _taggedTemplateLiteral(["\n    font-weight: normal;\n    font-size: 18px;\n    line-height: 21px;\n    /* identical to box height */\n    color: #334680;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-family: Roboto;\n    font-style: normal;\n    font-weight: normal;\n    font-size: 18px;\n    line-height: 21px;\n    /* identical to box height */\n\n\n    color: #334680;\n\n"]);
 
   _templateObject20 = function _templateObject20() {
     return data;
@@ -36100,7 +36100,7 @@ function _templateObject19() {
 }
 
 function _templateObject18() {
-  var data = _taggedTemplateLiteral(["\n    &:nth-of-type(2) {\n        display: flex;\n        align-items: flex-end;\n        justify-content: space-between;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    &:nth-of-type(1) {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n    }\n    &:nth-of-type(2) {\n        display: flex;\n        align-items: flex-end;\n        justify-content: space-between;\n    }\n"]);
 
   _templateObject18 = function _templateObject18() {
     return data;
@@ -36110,7 +36110,7 @@ function _templateObject18() {
 }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["\n    max-width: 90px;\n    height: auto;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 90px;\n    height: auto;\n    align-self: center;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);\n"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -36210,7 +36210,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    background: #FFFFFF;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n    border-radius: 4px;\n    padding: 17px 14px;\n    border: none;\n    outline: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n    border-radius: 4px;\n    padding: 17px 14px;\n    border: none;\n    outline: none;\n\n    &::placeholder {\n    padding-inline-start: 30px;\n    background: url('/img/earth-line.svg') no-repeat;\n    align-items: center;\n    background-position-y: 0px;\n    background-position-x: 0px;\n    z-index: 19;\n    opacity: .6;\n    } \n    background: #FFFFFF;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -36240,7 +36240,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    width: 18px;\n    height: 18px;\n    margin-right: 12px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 18px;\n    height: 18px;\n    margin-right: 12px;\n    cursor: pointer;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36352,11 +36352,11 @@ var Wrapper = _styledComponents.default.div(_templateObject18());
 
 exports.Wrapper = Wrapper;
 
-var JobLoc = _styledComponents.default.h3(_templateObject19());
+var JobLoc = _styledComponents.default.span(_templateObject19());
 
 exports.JobLoc = JobLoc;
 
-var JobTitle = _styledComponents.default.p(_templateObject20());
+var JobTitle = _styledComponents.default.span(_templateObject20());
 
 exports.JobTitle = JobTitle;
 
@@ -36595,7 +36595,7 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-top: 32px;\n    font-family: Roboto;\n    font-style: normal;\n    font-weight: normal;\n    font-size: 16px;\n    line-height: 150%;\n    /* or 24px */\n    color: #334680;\n\n"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -36655,7 +36655,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    font-style: normal;\n    font-weight: 500;\n    line-height: 14px;\n    /* padding-bottom: 2rem; */\n    /* identical to box height */\n    color: #B7BCCE;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-style: normal;\n    font-weight: 500;\n    line-height: 14px;\n    margin-top: 0;\n    margin-bottom: 35px;\n    /* identical to box height */\n    color: #B7BCCE;\n\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -36675,7 +36675,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-style: normal;\n    font-weight: bold;\n    font-size: 24px;\n    line-height: 28px;\n\n    color: #334680;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -36715,7 +36715,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    word-break: break-all;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36725,7 +36725,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-weight: bold;\n    font-size: 14px;\n    line-height: 21px;\n    /* identical to box height */\n    text-transform: uppercase;\n    color: #B9BDCF;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36735,7 +36735,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    color: #1E86FF;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36755,7 +36755,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    @media (min-width: 1114px) {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        gap: 32px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    \n    color: #334680;\n    @media (min-width: 1114px) {\n        display: grid;\n        grid-template-columns: 25% 1fr;\n        gap: 32px;\n    }\n    a {\n        text-decoration: none;\n        color: #1E86FF;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36804,7 +36804,7 @@ var JobType = _styledComponents.default.button(_templateObject10());
 
 exports.JobType = JobType;
 
-var CreatedAt = _styledComponents.default.span(_templateObject11());
+var CreatedAt = _styledComponents.default.p(_templateObject11());
 
 exports.CreatedAt = CreatedAt;
 
@@ -55482,7 +55482,7 @@ function LocationContainer(_ref) {
   }, []);
   var filter = response !== null && // filter the data by their title, location, company name, and job type
   response.filter(function (job) {
-    return job.location.toLowerCase().includes(currentLocation.toLowerCase()) && job.title.toLowerCase().includes(currentFilter.toLowerCase()) && job.company.toLowerCase().includes(currentFilter.toLowerCase()) && job.type.toLowerCase().includes(jobType.toLowerCase());
+    return job.location.toLowerCase().includes(currentLocation.toLowerCase()) && job.title.toLowerCase().includes(currentFilter.toLowerCase()) && job.location.toLowerCase().includes(zipCode.toLowerCase()) && job.company.toLowerCase().includes(currentFilter.toLowerCase()) && job.type.toLowerCase().includes(jobType.toLowerCase());
   });
   console.log(response);
   console.log(filter);
@@ -55503,7 +55503,8 @@ function LocationContainer(_ref) {
     checked: jobType === "Full time"
   }), /*#__PURE__*/_react.default.createElement(_componets.Location.JobTypeLabel, null, "Full time")), /*#__PURE__*/_react.default.createElement(_componets.Location.Frame, null, /*#__PURE__*/_react.default.createElement(_componets.Location.FrameLabel, null, "Location"), /*#__PURE__*/_react.default.createElement(_componets.Location.FrameInput, {
     onChange: function onChange(e) {
-      return setZipCode(e.target.value);
+      setZipCode(e.target.value);
+      console.log(zipCode);
     },
     placeholder: "City, state, zip code or country"
   }), locationsData.map(function (locationData) {
@@ -55519,11 +55520,11 @@ function LocationContainer(_ref) {
         });
       },
       value: locationData.name,
-      type: "checkbox"
+      type: "radio"
     }), /*#__PURE__*/_react.default.createElement(_componets.Location.JobTypeLabel, null, locationData.name));
   })))), /*#__PURE__*/_react.default.createElement(_componets.Location.Jobs, null, /*#__PURE__*/_react.default.createElement(_componets.Location.List, null, response !== null && // filter the data by their title, location, company name, and job type
   response.filter(function (job) {
-    return job.location.toLowerCase().includes(currentLocation.toLowerCase()) && job.title.toLowerCase().includes(currentFilter.toLowerCase()) && job.company.toLowerCase().includes(currentFilter.toLowerCase()) && job.type.toLowerCase().includes(jobType.toLowerCase());
+    return job.location.toLowerCase().includes(currentLocation.toLowerCase()) && job.title.toLowerCase().includes(currentFilter.toLowerCase()) && job.company.toLowerCase().includes(currentFilter.toLowerCase()) && job.location.toLowerCase().includes(zipCode.toLowerCase()) && job.type.toLowerCase().includes(jobType.toLowerCase());
   }).slice(fromPage, toPage).map(function (job) {
     return /*#__PURE__*/_react.default.createElement(_componets.Location.Link, {
       to: "/".concat(job.id),
@@ -55809,7 +55810,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49514" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62005" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -27,6 +27,7 @@ export default function LocationContainer({children}) {
             response.filter(job =>
             job.location.toLowerCase().includes(currentLocation.toLowerCase())
             && job.title.toLowerCase().includes(currentFilter.toLowerCase())
+            && job.location.toLowerCase().includes(zipCode.toLowerCase())
             && job.company.toLowerCase().includes(currentFilter.toLowerCase())
             && job.type.toLowerCase().includes(jobType.toLowerCase()))
     
@@ -63,8 +64,10 @@ export default function LocationContainer({children}) {
                     <Location.FrameLabel>
                         Location
                     </Location.FrameLabel>
-                    <Location.FrameInput onChange={(e) => 
-                    setZipCode(e.target.value)}
+                    <Location.FrameInput onChange={(e) => {
+                    setZipCode(e.target.value)
+                    console.log(zipCode);
+                    }}
                     placeholder="City, state, zip code or country"/>
                     {locationsData.map((locationData) => 
                     <Location.Fieldset key={locationData.id}>
@@ -74,7 +77,7 @@ export default function LocationContainer({children}) {
                         setLocation(e.target.value)
                         dispatch({ type: 'SWITCHT_LOCATION', switchLocation: e.target.value })
                         }} value={locationData.name}
-                        type="checkbox"/>
+                        type="radio"/>
                         <Location.JobTypeLabel>
                             {locationData.name}
                         </Location.JobTypeLabel>
@@ -92,6 +95,7 @@ export default function LocationContainer({children}) {
             job.location.toLowerCase().includes(currentLocation.toLowerCase())
             && job.title.toLowerCase().includes(currentFilter.toLowerCase())
             && job.company.toLowerCase().includes(currentFilter.toLowerCase())
+            && job.location.toLowerCase().includes(zipCode.toLowerCase())
             && job.type.toLowerCase().includes(jobType.toLowerCase())).slice(fromPage, toPage).map(job => (
                 <Location.Link to={`/${job.id}`} key={job.id}>
                     <Location.Item>

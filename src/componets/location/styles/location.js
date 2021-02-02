@@ -21,6 +21,7 @@ export const JobTypeInput = styled.input`
     width: 18px;
     height: 18px;
     margin-right: 12px;
+    cursor: pointer;
 `;
 
 export const JobTypeLabel = styled.label`
@@ -38,12 +39,22 @@ export const Frame = styled.div`
 
 
 export const FrameInput = styled.input`
-    background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     padding: 17px 14px;
     border: none;
     outline: none;
+
+    &::placeholder {
+    padding-inline-start: 30px;
+    background: url('/img/earth-line.svg') no-repeat;
+    align-items: center;
+    background-position-y: 0px;
+    background-position-x: 0px;
+    z-index: 19;
+    opacity: .6;
+    } 
+    background: #FFFFFF;
 `;
 
 export const FrameLabel = styled.label`
@@ -114,10 +125,16 @@ export const Item = styled.li`
 export const Image = styled.img`
     max-width: 90px;
     height: auto;
+    align-self: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 export const Wrapper = styled.div`
+    &:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     &:nth-of-type(2) {
         display: flex;
         align-items: flex-end;
@@ -125,7 +142,7 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const JobLoc = styled.h3`
+export const JobLoc = styled.span`
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
@@ -133,12 +150,17 @@ export const JobLoc = styled.h3`
     color: #334680;
 `;
 
-export const JobTitle = styled.p`
+export const JobTitle = styled.span`
+    font-family: Roboto;
+    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     /* identical to box height */
+
+
     color: #334680;
+
 `;
 
 export const JobTypeName = styled.button`
@@ -149,6 +171,8 @@ export const JobTypeName = styled.button`
     line-height: 14px;
     /* identical to box height */
     color: #334680;
+
+    max-width: fit-content;
     border: 1px solid #334680;
     box-sizing: border-box;
     border-radius: 4px;
@@ -169,9 +193,12 @@ export const JobCreatedOn = styled.span`
 `;
 
 export const Pagination = styled.div`
-
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
 `;
 export const PageButton = styled.button`
+    margin-right: 16px;
     padding: 11px 15px;
     font-size: 1.2rem;
     line-height: 1.4rem;
@@ -180,13 +207,13 @@ export const PageButton = styled.button`
     border-radius: 4px;
     outline: none;
     cursor: pointer;
-
     &:hover {
         border-color: #1e86ff;
     }
 `;
 
 export const Arrow = styled.i`
+    margin-right: 16px;
     padding: 14px 15px;
     position: relative;
     top: 2px;
@@ -195,6 +222,10 @@ export const Arrow = styled.i`
     color: #b9bdcf;
     outline: none;
     cursor: pointer;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
     &:hover {
         border-color: #1e86ff;
     }
