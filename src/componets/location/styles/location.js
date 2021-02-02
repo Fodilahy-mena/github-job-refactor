@@ -114,7 +114,7 @@ export const Link = styled(ReachRouterLink)`
 export const Item = styled.li`
     display: grid;
     grid-template-columns: auto 1fr 1fr;
-    gap: 10px;
+    gap: 16px;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 4px;

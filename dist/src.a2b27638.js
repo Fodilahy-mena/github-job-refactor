@@ -36120,7 +36120,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: auto 1fr 1fr;\n    gap: 10px;\n    background: #FFFFFF;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n    border-radius: 4px;\n    padding: 14px;\n    margin-bottom: 16px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: auto 1fr 1fr;\n    gap: 16px;\n    background: #FFFFFF;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);\n    border-radius: 4px;\n    padding: 14px;\n    margin-bottom: 16px;\n"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
